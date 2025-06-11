@@ -26,7 +26,7 @@ void organizarNomes(char nomes[10][40]){
     }
 }
 
-void apresentaNomes(char nomes[10][40]){
+void mostrarNomes(char nomes[10][40]){
     int i;
     printf("\n");
     for (i = 0; i < 10; i++){
@@ -69,7 +69,7 @@ int main(){
 
     entradaNomes(nomes);
 
-    opcao = perguntaOrdenacao();
+    opcao = organizar();
 
     if (opcao == 'S' || opcao == 's') {
         organizarNomes(nomes);
