@@ -34,7 +34,7 @@ void apresentaNomes(char nomes[10][40]){
     }
 }
 
-char ordenacao(){
+char organizar(){
     char op;
     printf("Organizar os nomes em ordem alfabetica? \nSim[S] Nao[N]: ");
     fflush(stdin);
