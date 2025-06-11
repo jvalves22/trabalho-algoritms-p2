@@ -6,7 +6,8 @@ void entradaNomes(char nomes[10][40]){
     int i;
     for (i = 0; i < 10; i++){
         printf("Insira %2do. nome: ", i+1);
-        fflush(stdin); fgets(nomes[i], 40, stdin);
+        fflush(stdin);
+        fgets(nomes[i], 40, stdin);
         nomes[i][strcspn(nomes[i], "\n")] = '\0';
     }
 }
@@ -33,10 +34,11 @@ void apresentaNomes(char nomes[10][40]){
     }
 }
 
-char perguntaOrdenacao(){
+char ordenacao(){
     char op;
-    printf("Deseja organizar os nomes em ordem alfabetica? \nSim[S] Nao[N]: ");
-    fflush(stdin); op = getchar();
+    printf("Organizar os nomes em ordem alfabetica? \nSim[S] Nao[N]: ");
+    fflush(stdin);
+    op = getchar();
     while (getchar() != '\n' && !feof(stdin));
     return op;
 }
@@ -44,7 +46,8 @@ char perguntaOrdenacao(){
 char continuar(){
     char resp;
     printf("Quer continuar? \nSim[S] Nao[N]: ");
-    fflush(stdin); resp = getchar();
+    fflush(stdin);
+    resp = getchar();
     while (getchar() != '\n' && !feof(stdin));
     return resp;
 }
@@ -80,7 +83,8 @@ int main(){
     resp = 'S';
     while (resp == 'S' || resp == 's'){
         printf("\nDigite o nome que deseja ser pesquisado: ");
-        fflush(stdin); fgets(pesquisa, 40, stdin);
+        fflush(stdin);
+        fgets(pesquisa, 40, stdin);
         pesquisa[strcspn(pesquisa, "\n")] = '\0';
 
         pos = pesquisaNome(nomes, pesquisa);
